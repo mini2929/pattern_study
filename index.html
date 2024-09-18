@@ -29,7 +29,6 @@
         console.log(student1['name', 'age', 'hobby']);
         // 객체를 불러오는 방법 1. 객체명.key값 2. 객체명[key값을 문자열로] > 연관배열
 
-
         student1.age = 21;
         // 대입연산자를 이용해서 객체값 바꾸기
         student1.gender ='male';
@@ -41,6 +40,66 @@
         // 위치가 상관없는 것들 : 배열로 관리
         // 자료값의 설명, 자료형이 다양할 때 : 객체로 관리
         // 효율적!
+
+
+        // 함수 : 특정 코드들을 그룹으로 패키징해서 재활용하기 위함
+        // function 함수명(전달값){전달값을 받아서 실행할 구문 return 함수밖으로 내보낼 값}
+        // 함수에 전달값이 없을 수도 있음
+        // 매개변수(parameter) : 함수 외부에서 함수 내부로 값을 전달하기 위한 통로명 (num1, num2)
+        // 인수 (argument) : 매개변수를 통해 전달되는 실제적인 값(1000,4)
+        // 반환값 (return) : 함수 내부에서 만들어진 값을 함수 외부로 전달
+
+        function plus(num1, num2){
+            console.log(num1 + num2)
+        }
+
+        plus(1000,4);
+
+        function plus2(num1, num2){
+            const result = num1 + num2; // 지역변수
+            console.log(result);
+        }
+        // 특정 코드 블록 안에서 선언된 변수는 지역변수 : 해당 코드블록 안쪽에서만 읽힘
+        // 해당 코드블록 밖에서는 접근 불가
+
+        plus2(1000,2000);
+        // console.log(result); > 블럭 외부에서는 못불러옴
+
+        // 반환값 - 함수 실행 도중 강제종료
+
+        function plus3(num1, num2){
+            const result = num1 + num2; // 지역변수
+            return result;
+        }
+
+        plus3(4000,2000);
+        const returned = plus3(4000,2000);
+        console.log(returned);
+
+        function work() {
+            console.log('test1');
+            console.log('test2');
+            console.log('useless1');
+            console.log('useless2');
+        }
+
+        work();
+
+
+        function work2(condition) {
+            console.log('test1');
+            console.log('test2');
+            if (condition) return;
+            // work2라는 함수를 호출 할 때 condition값으로 true 출력 시 return 실행(강제종료)
+            console.log('useless1');
+            console.log('useless2');
+        }
+
+        work2(true);
+        // 함수가 true가 될 경우 종료
+        work2(false);
+        // 조건문 성립이 안되기 때문에 무시되면서 전체 동작
+
 </script>
 </body>
 </html>
