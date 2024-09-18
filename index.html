@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+        // 배열
         const colors = ['red', 'green', 'blue']
         console.log(colors[2]); // 순서값으로 배열의 값 추출
         console.log(colors.length); // 배열의 전체 갯수값 추출
@@ -14,6 +15,32 @@
         console.log(colors);
         console.log(colors.length);
 
-    </script>
+        // 객체
+        const student1 = {
+            name : 'Aandy',
+            age : 20,
+            adress : 'Seoul',
+            hobby : 'game',
+        } //property key : property value
+        console.log(student1);
+        console.log(student1.age);
+        console.log(student1.adress);
+        console.log(student1['name']);
+        console.log(student1['name', 'age', 'hobby']);
+        // 객체를 불러오는 방법 1. 객체명.key값 2. 객체명[key값을 문자열로] > 연관배열
+
+
+        student1.age = 21;
+        // 대입연산자를 이용해서 객체값 바꾸기
+        student1.gender ='male';
+        // 초기 객체 생성이후 property명을 활용해서 값을 변경 가능
+        console.log(student1);
+
+
+        // 배열은 [], 객체는 {}
+        // 위치가 상관없는 것들 : 배열로 관리
+        // 자료값의 설명, 자료형이 다양할 때 : 객체로 관리
+        // 효율적!
+</script>
 </body>
 </html>
