@@ -120,6 +120,35 @@
     const minus2 = (num1, num2) => num1 - num2;
     console.log(minus2(4,2));
 
+// forEach 구문 : 내장함수
+    const colors2 = ['orange', 'pink', 'violet']
+    console.log(colors2[0]);
+    console.log(colors2[1]);
+    console.log(colors2[2]);
+
+    // 데이터베이스의 경우 만개 정도 될 수도 있는데 수작업으로 값을 뽑아내기엔 힘듦
+    // 배열을 반복 > 배열 전용 내장함수를 사용
+    /* forEach 기본구문
+    * forEach(); 괄호 안에 > 화살표함수 넣기 () => {}
+    
+    colors2.forEach((첫번째 변수는 데이타값, 두번쨰 변수는 순서값이 전달됨) => {
+    
+    });
+    */
+
+    colors2.forEach((data, index) => 
+    {
+        console.log(data);
+        console.log(colors[index]);
+
+    });
+
+    // 함수 순서에 따라 값 출력
+    // data 변수로 뽑는 것은 colors2(orange,pink,violet)
+    // 순서값 변수로 뽑는 것은 colors(red,green,blue)
+
+
+
 </script>
 </body>
 </html>
